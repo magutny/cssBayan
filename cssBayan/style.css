@@ -1,0 +1,25 @@
+.container {
+    padding: 1vh 3%;
+    height: 98vh;
+    background: azure;
+}
+
+input {
+    display: none;
+}
+img {
+    width: 50vw;
+    display: none;
+    align-self: center;
+}
+div i {
+    display: none !important;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    /* padding-bottom: 2vw; */
+}
+input:checked ~ img, input:checked ~ div i.fa-xmark {
+    display: block !important;
+}
