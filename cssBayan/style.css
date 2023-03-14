@@ -1,25 +1,75 @@
-.container {
-    padding: 1vh 3%;
-    height: 98vh;
+body {
+    height: 100%;
     background: azure;
 }
-
+.container {
+    padding: 1vh 3%;
+    width: 50vw;
+    margin: auto auto;
+    color:#ff8000;
+}
+h1 {
+    padding: 2vw 0;
+}   
 input {
     display: none;
 }
 img {
-    width: 50vw;
-    display: none;
+    width: 30vw;
+    height: 0;
+    transform: scale(0);
+     
     align-self: center;
+    transition: transform 2.5s;
 }
+
 div i {
-    display: none !important;
+    
+    transform: scale(0);
+    transition: transform 1.5s;
+    
 }
 label {
     display: flex;
     flex-direction: column;
-    /* padding-bottom: 2vw; */
+    cursor: inherit;
+    padding-bottom: 2vw;
 }
-input:checked ~ img, input:checked ~ div i.fa-xmark {
-    display: block !important;
+input:checked ~ img {
+    height: auto;
+    transform: scale(1);
+    padding-top: 2vw;
+    
+}
+label:checked {
+    color:#ff8000 !important;
+}
+input:checked ~ div i.fa-plus {
+    transform: scale(1) rotate(0.13turn) ;
+    
+}
+label div {
+    display: flex;
+    justify-content: space-between;
+}
+label:focus {
+    color:#ff8000 !important;
+}
+
+
+@media (hover: hover) {
+    .box:hover {
+        cursor: pointer;
+    }
+    .box:hover {
+    color: #007fff;
+    }
+    input:hover ~ img {
+        height: auto;
+        transform: scale(1);
+        padding-top: 2vw;
+    }
+    input:hover ~ div i.fa-plus {
+        transform: scale(1) rotate(0.13turn);
+    }
 }
